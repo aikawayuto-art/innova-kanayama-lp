@@ -19,7 +19,7 @@
 
 <header class="header scrolled" id="header">
   <a href="index.html" class="brand">
-    <img class="brand__mark" src="https://files.catbox.moe/vmc126.jpg" alt="INNOVA" loading="eager">
+    <img class="brand__mark" src="img/logo.jpg" alt="INNOVA" loading="eager">
     <span class="brand__name">INNOVA</span>
   </a>
   <nav class="nav">
@@ -115,15 +115,15 @@
   </div>
   <div class="flow__steps">
     <div class="flow__step reveal">
-      <div class="flow__media"><img src="https://images.pexels.com/photos/6740295/pexels-photo-6740295.jpeg?auto=compress&cs=tinysrgb&w=800" alt="トレーナーが笑顔でお迎えするカウンセリング" loading="lazy"></div>
+      <div class="flow__media"><img src="img/pexels-flow-welcome.jpg" alt="トレーナーが笑顔でお迎えするカウンセリング" loading="lazy"></div>
       <div class="flow__body"><span class="flow__no">STEP 01</span><h3>まずは無料で相談</h3><p>目標・生活・不安をじっくりヒアリング。あなたに最適なプランをご提案します。無理な勧誘は一切ありません。</p></div>
     </div>
     <div class="flow__step reveal" style="--d:.1s">
-      <div class="flow__media"><img src="https://images.pexels.com/photos/6551087/pexels-photo-6551087.jpeg?auto=compress&cs=tinysrgb&w=800" alt="笑顔で楽しむ体験トレーニング" loading="lazy"></div>
+      <div class="flow__media"><img src="img/pexels-flow-training.jpg" alt="笑顔で楽しむ体験トレーニング" loading="lazy"></div>
       <div class="flow__body"><span class="flow__no">STEP 02</span><h3>体験トレーニング</h3><p>専属トレーナーと実際に体験。設備と空間、そして相性を、その身体で確かめてください。</p></div>
     </div>
     <div class="flow__step reveal" style="--d:.2s">
-      <div class="flow__media"><img src="https://images.pexels.com/photos/6740312/pexels-photo-6740312.jpeg?auto=compress&cs=tinysrgb&w=800" alt="トレーナーとハイタッチで祝うスタートの瞬間" loading="lazy"></div>
+      <div class="flow__media"><img src="img/pexels-flow-highfive.jpg" alt="トレーナーとハイタッチで祝うスタートの瞬間" loading="lazy"></div>
       <div class="flow__body"><span class="flow__no">STEP 03</span><h3>入会・スタート</h3><p>あなた専用のプログラムが始動。最初のセッションから、なりたい自分への一歩を踏み出します。</p></div>
     </div>
   </div>
@@ -202,8 +202,8 @@
 
 <section class="cta" id="contact">
   <div class="cta__bg" aria-hidden="true">
-    <video autoplay muted loop playsinline poster="https://images.pexels.com/videos/9778003/pictures/preview-0.jpeg">
-      <source src="https://videos.pexels.com/video-files/9778003/9778003-hd_1920_1080_25fps.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline poster="img/cta-poster.jpg">
+      <source src="video/cta.mp4" type="video/mp4">
     </video>
   </div>
   <div class="cta__inner">
@@ -215,17 +215,14 @@
     <p class="sec-eyebrow reveal">START TODAY</p>
     <h2 class="cta__title reveal" style="--d:.08s"><span class="nobr">最初の一歩は、</span><br><span class="nobr y">まずは無料で相談から。</span></h2>
     <p class="cta__lead reveal" style="--d:.16s">無理な勧誘は一切ありません。<strong>金山の他の大手・中堅ジムも見学した上で、比較して選んでください。</strong><br>それでも選ばれる自信があります。4回以内なら全額返金。リスクはゼロです。</p>
-    <form class="cta__form reveal" style="--d:.24s" onsubmit="return false;">
-      <div class="field"><label for="f-name">お名前</label><input id="f-name" type="text" placeholder="山田 太郎" autocomplete="name"></div>
-      <div class="field"><label for="f-email">メールアドレス</label><input id="f-email" type="email" placeholder="you@example.com" autocomplete="email"></div>
-      <div class="field"><label for="f-date">ご希望日時</label><input id="f-date" type="text" placeholder="例）平日の夜 / 土曜の午前"></div>
-      <div class="field field--full"><label for="f-msg">ご相談内容</label><textarea id="f-msg" rows="3" placeholder="目標や不安なことがあればご記入ください"></textarea></div>
-      <a href="https://lin.ee/BIl4Lo9" target="_blank" rel="noopener" class="btn btn--cta cta__submit" style="width:100%;text-align:center;margin-top:.4rem">LINEで無料相談する</a>
+    <div class="cta__form reveal" style="--d:.24s;display:flex;flex-direction:column;gap:1rem;align-items:center">
+      <a href="https://lin.ee/BIl4Lo9" target="_blank" rel="noopener" class="btn btn--cta" style="width:100%;max-width:480px;text-align:center;padding:1.2rem 2rem;font-size:1rem">LINEで無料相談する</a>
       <a href="tel:09065800431" class="cta__line"><span class="cta__line-ico" aria-hidden="true">&#9742;</span>お電話でも受付：090-6580-0431</a>
-    </form>
+      <p class="cta__sub">強引な勧誘は一切ありません。お気軽にどうぞ。</p>
+    </div>
   </div>
   <footer class="footer">
-    <div class="footer__brand"><img class="brand__mark" src="https://files.catbox.moe/vmc126.jpg" alt="INNOVA" loading="eager"> INNOVA</div>
+    <div class="footer__brand"><img class="brand__mark" src="img/logo.jpg" alt="INNOVA" loading="eager"> INNOVA</div>
     <div class="footer__info">
       <p>〒460-0017 愛知県名古屋市中区松原3-12-5 丸美タウンマンション1F</p>
       <p>営業時間 8:00 &ndash; 23:00／地下鉄 山王駅 徒歩10分・東別院駅 徒歩15分・金山駅 徒歩20分</p>
