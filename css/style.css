@@ -647,3 +647,60 @@ section{position:relative;z-index:1}
 .page-inner{padding-top:5rem}
 /* no fixed bg on subpages */
 .subpage .hero-bgvideo,.subpage #gl,.subpage .fxsmoke{display:none}
+
+/* ===========================================================
+   CONCERN (悩み共感)
+   =========================================================== */
+.concern{padding:7rem 0;background:var(--black)}
+.concern__grid{max-width:var(--maxw);margin:2.5rem auto 0;padding:0 6vw;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.concern__item{display:flex;gap:1rem;align-items:flex-start;padding:1.4rem 1.5rem;
+  background:var(--char);border:1px solid var(--line);border-radius:14px;transition:.3s var(--ease)}
+.concern__item:hover{border-color:rgba(245,196,0,.35);transform:translateY(-2px)}
+.concern__ic{flex-shrink:0;width:36px;height:36px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(245,196,0,.08);border:1px solid rgba(245,196,0,.25);color:var(--y);font-size:1.1rem}
+.concern__text{font-size:1rem;color:var(--white);line-height:1.65}
+.concern__text span{color:var(--grey);font-size:.86rem;display:block;margin-top:.3rem}
+@media(max-width:680px){.concern__grid{grid-template-columns:1fr}}
+
+/* ===========================================================
+   REASONS (選ばれる理由)
+   =========================================================== */
+.reasons{padding:7rem 0;background:var(--ink)}
+.reasons__grid{max-width:var(--maxw);margin:2.5rem auto 0;padding:0 6vw;display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.reason{text-align:center;padding:2.4rem 1.8rem;background:var(--char);
+  border:1px solid var(--line);border-radius:16px;transition:.4s var(--ease)}
+.reason:hover{border-color:rgba(245,196,0,.45);transform:translateY(-5px)}
+.reason__num{font-family:"Anton",sans-serif;font-size:clamp(2.6rem,5vw,3.8rem);color:var(--y);line-height:1;margin-bottom:.3rem}
+.reason__num em{font-size:1rem;font-style:normal;color:var(--white);font-family:"Zen Kaku Gothic New";font-weight:700}
+.reason__title{font-size:1.15rem;font-weight:700;margin-bottom:.7rem}
+.reason__desc{color:var(--grey);font-size:.92rem;line-height:1.65}
+@media(max-width:980px){.reasons__grid{grid-template-columns:1fr}}
+
+/* ===========================================================
+   MID-CTA (中間CTA)
+   =========================================================== */
+.mid-cta{padding:3.5rem 6vw;text-align:center;background:var(--black);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mid-cta__text{font-size:1.05rem;color:var(--grey);margin-bottom:1.4rem;
+  font-family:"Shippori Mincho",serif;font-weight:600}
+.mid-cta__text strong{color:var(--white)}
+.mid-cta__buttons{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+
+/* ===========================================================
+   FAQ
+   =========================================================== */
+.faq{padding:7rem 0;background:var(--black)}
+.faq__list{max-width:780px;margin:2.5rem auto 0;padding:0 6vw;display:flex;flex-direction:column;gap:.7rem}
+.faq__item{background:var(--char);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.3s}
+.faq__item:hover{border-color:rgba(245,196,0,.3)}
+.faq__q{display:flex;align-items:center;gap:1rem;padding:1.3rem 1.5rem;cursor:pointer;
+  font-weight:700;font-size:1rem;color:var(--white);user-select:none;list-style:none}
+.faq__q::-webkit-details-marker{display:none}
+.faq__q::before{content:"Q";flex-shrink:0;width:32px;height:32px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--y);color:#1a1300;font-family:"Anton",sans-serif;font-size:.9rem}
+.faq__q::after{content:"+";margin-left:auto;font-size:1.3rem;color:var(--grey);
+  font-family:"Oswald",sans-serif;transition:.3s var(--ease)}
+.faq__item[open] .faq__q::after{content:"\2212";color:var(--y)}
+.faq__a{padding:0 1.5rem 1.4rem 4rem;color:var(--grey);font-size:.95rem;line-height:1.75}
