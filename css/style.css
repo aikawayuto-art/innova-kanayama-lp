@@ -630,7 +630,7 @@ section{position:relative;z-index:1}
   padding:.3rem .2rem calc(.3rem + env(safe-area-inset-bottom,0px))}
 .btabs__inner{display:flex;justify-content:space-around;max-width:500px;margin:0 auto}
 .btabs__item{display:flex;flex-direction:column;align-items:center;gap:.15rem;
-  padding:.45rem .3rem;font-size:.62rem;color:var(--grey);text-decoration:none;
+  padding:.5rem .4rem;font-size:.65rem;color:var(--grey);text-decoration:none;
   font-family:"Oswald",sans-serif;letter-spacing:.06em;transition:.2s;min-width:0;flex:1}
 .btabs__item svg{width:20px;height:20px;flex-shrink:0}
 .btabs__item.active{color:var(--y)}
