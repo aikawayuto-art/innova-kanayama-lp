@@ -907,3 +907,58 @@ section{position:relative;z-index:1}
   50%{box-shadow:0 0 0 6px rgba(245,196,0,0)}
 }
 @media(prefers-reduced-motion:reduce){.campaign__tag{animation:none}}
+
+/* ===========================================================
+   UI/UX PRO MAX — CRITICAL FIXES
+   =========================================================== */
+
+/* --- CRITICAL: Remove 300ms tap delay on mobile --- */
+a,button,input,select,textarea,[role="button"],.btn,.fab,.mcta__btn,.btabs__item,
+.ba-slider__handle,.nav__toggle,.faq__q,.f-card,.m-card,.p-card,.concern__item,.perk{
+  touch-action:manipulation;
+}
+
+/* --- CRITICAL: Visible focus states for keyboard nav --- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+.btn:focus-visible,
+.faq__q:focus-visible{
+  outline:2px solid var(--y);
+  outline-offset:3px;
+  border-radius:4px;
+}
+.btn:focus-visible{outline-offset:4px;border-radius:60px}
+
+/* --- HIGH: cursor-pointer on ALL interactive elements --- */
+.f-card,.m-card,.ba-card,.v-card,.concern__item,.perk,
+.tp-card,.flow__step,.reason,.pagenav__link,.campaign,
+details.faq__item summary{
+  cursor:pointer;
+}
+
+/* --- HIGH: Prevent accidental pull-to-refresh on mobile --- */
+html{overscroll-behavior:contain}
+
+/* --- MEDIUM: Ensure minimum touch target (44px) --- */
+.nav a{min-height:44px;display:inline-flex;align-items:center}
+.btabs__item{min-height:44px}
+.mcta__btn{min-height:48px}
+
+/* --- Form accessibility: input focus enhancement --- */
+.field input:focus-visible,
+.field textarea:focus-visible{
+  outline:none;
+  border-color:var(--y);
+  box-shadow:0 0 0 3px rgba(245,196,0,.15);
+}
+
+/* --- Skip to content link (screen reader accessible) --- */
+.skip-link{
+  position:absolute;top:-100%;left:50%;transform:translateX(-50%);
+  background:var(--y);color:#1a1300;padding:.8rem 1.6rem;border-radius:0 0 8px 8px;
+  font-family:"Oswald",sans-serif;font-weight:600;z-index:999;
+  transition:top .2s;
+}
+.skip-link:focus{top:0}

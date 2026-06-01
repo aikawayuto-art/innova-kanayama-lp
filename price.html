@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="subpage">
+<a href="#main-content" class="skip-link">メインコンテンツへ</a>
 
 <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
 <div class="grain" aria-hidden="true"></div>
@@ -214,10 +215,10 @@
     <h2 class="cta__title reveal" style="--d:.08s"><span class="nobr">最初の一歩は、</span><br><span class="nobr y">まずは無料で相談から。</span></h2>
     <p class="cta__lead reveal" style="--d:.16s">無理な勧誘は一切ありません。まずはあなたの理想と現在地を、一緒に確かめましょう。</p>
     <form class="cta__form reveal" style="--d:.24s" onsubmit="return false;">
-      <div class="field"><label>お名前</label><input type="text" placeholder="山田 太郎"></div>
-      <div class="field"><label>メールアドレス</label><input type="email" placeholder="you@example.com"></div>
-      <div class="field"><label>ご希望日時</label><input type="text" placeholder="例）平日の夜 / 土曜の午前"></div>
-      <div class="field field--full"><label>ご相談内容</label><textarea rows="3" placeholder="目標や不安なことがあればご記入ください"></textarea></div>
+      <div class="field"><label for="f-name">お名前</label><input id="f-name" type="text" placeholder="山田 太郎" autocomplete="name"></div>
+      <div class="field"><label for="f-email">メールアドレス</label><input id="f-email" type="email" placeholder="you@example.com" autocomplete="email"></div>
+      <div class="field"><label for="f-date">ご希望日時</label><input id="f-date" type="text" placeholder="例）平日の夜 / 土曜の午前"></div>
+      <div class="field field--full"><label for="f-msg">ご相談内容</label><textarea id="f-msg" rows="3" placeholder="目標や不安なことがあればご記入ください"></textarea></div>
       <button type="submit" class="btn btn--cta cta__submit">まずは無料で相談する</button>
       <a href="tel:09065800431" class="cta__line"><span class="cta__line-ico" aria-hidden="true">&#9742;</span>お電話でも受付：090-6580-0431</a>
       <p class="cta__sub">※ こちらはデザインサンプルです。送信機能はデモのため動作しません。</p>
