@@ -743,3 +743,167 @@ section{position:relative;z-index:1}
   .reasons--split .reasons__media::after{background:linear-gradient(180deg,transparent 50%,var(--ink))}
   .reasons--split .reasons__content{padding:3rem 6vw 5rem}
 }
+
+/* ===========================================================
+   FRONTEND-DESIGN POLISH LAYER
+   =========================================================== */
+
+/* --- Gold shimmer on key accent elements --- */
+.hero__subtitle .y,
+.sec-title .y,
+.statement__title .y{
+  background:linear-gradient(105deg,var(--y) 0%,var(--y-soft) 42%,var(--y) 58%,var(--y2) 100%);
+  background-size:250% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:goldShimmer 6s ease-in-out infinite;
+}
+@keyframes goldShimmer{
+  0%,100%{background-position:0% center}
+  50%{background-position:100% center}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero__subtitle .y,.sec-title .y,.statement__title .y{
+    background:none;-webkit-text-fill-color:var(--y);
+  }
+}
+
+/* --- Enhanced card depth on hover --- */
+.m-card:hover .m-card__inner,
+.p-card:hover,
+.v-card:hover,
+.concern__item:hover,
+.perk:hover{
+  box-shadow:0 0 0 1px rgba(245,196,0,.2),
+             0 24px 48px -16px rgba(0,0,0,.7),
+             inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+/* --- Button press effect --- */
+.btn:active{transform:translateY(1px) scale(.98)}
+.btn--cta{position:relative;overflow:hidden}
+.btn--cta::before{
+  content:"";position:absolute;top:50%;left:50%;width:0;height:0;
+  background:rgba(255,255,255,.2);border-radius:50%;
+  transform:translate(-50%,-50%);transition:width .5s ease,height .5s ease,opacity .4s;opacity:0;
+}
+.btn--cta:active::before{width:300px;height:300px;opacity:1;transition:0s}
+
+/* --- Eyebrow animated line --- */
+.sec-eyebrow::before{
+  width:0;animation:eyebrowLine .8s var(--ease) forwards;
+  animation-play-state:paused;
+}
+.reveal.in .sec-eyebrow::before,
+.sec-eyebrow{animation-play-state:running}
+.in .sec-eyebrow::before{width:26px}
+@keyframes eyebrowLine{from{width:0}to{width:26px}}
+
+/* --- Scroll progress glow --- */
+#scrollBar{
+  box-shadow:0 0 12px rgba(245,196,0,.6),0 0 32px rgba(245,196,0,.2);
+}
+
+/* --- Section divider gradient --- */
+.stats::after,
+.concern::after{
+  content:"";position:absolute;bottom:0;left:10%;right:10%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(245,196,0,.2) 30%,rgba(245,196,0,.2) 70%,transparent);
+}
+
+/* --- Stat counter glow pulse on visible --- */
+.stat__num .count{
+  text-shadow:0 0 20px rgba(245,196,0,.0);
+  transition:text-shadow .6s ease;
+}
+.stat.in .stat__num .count{
+  text-shadow:0 0 24px rgba(245,196,0,.35);
+}
+
+/* --- Concept points stagger enhance --- */
+.concept__points li{
+  transition:transform .4s var(--ease),border-color .3s,box-shadow .3s;
+}
+.concept__points li:hover{
+  border-color:rgba(245,196,0,.35);
+  box-shadow:0 8px 24px -12px rgba(245,196,0,.15);
+  transform:translateX(6px);
+}
+
+/* --- FAQ open/close smooth --- */
+.faq__a{
+  max-height:0;overflow:hidden;padding-top:0;padding-bottom:0;
+  transition:max-height .4s var(--ease),padding .3s var(--ease);
+}
+.faq__item[open] .faq__a{
+  max-height:300px;padding-top:0;padding-bottom:1.4rem;
+}
+
+/* --- Trainer card photo subtle Ken Burns --- */
+.tp-card__media img{
+  transition:transform 8s ease;
+}
+.tp-card:hover .tp-card__media img{
+  transform:scale(1.06);
+}
+
+/* --- Facility card gradient overlay enhance --- */
+.f-card::after{
+  transition:opacity .4s var(--ease);
+}
+.f-card:hover::after{
+  opacity:.85;
+  background:linear-gradient(180deg,rgba(8,8,9,.05) 0%,rgba(8,8,9,.3) 30%,rgba(245,196,0,.04) 60%,rgba(8,8,9,.92) 100%);
+}
+
+/* --- Statement section parallax-like effect --- */
+.statement__bg img{
+  transition:transform .6s var(--ease);
+}
+.statement:hover .statement__bg img{
+  transform:scale(1.03);
+}
+
+/* --- Voice card quote decoration --- */
+.v-card::before{
+  content:"\201C";position:absolute;top:.6rem;right:1.2rem;
+  font-family:"Shippori Mincho",serif;font-size:4rem;line-height:1;
+  color:rgba(245,196,0,.08);pointer-events:none;
+}
+.v-card{position:relative}
+
+/* --- Price card featured glow animate --- */
+.p-card--feature{
+  animation:featureGlow 4s ease-in-out infinite;
+}
+@keyframes featureGlow{
+  0%,100%{box-shadow:0 30px 70px -30px rgba(245,196,0,.25)}
+  50%{box-shadow:0 30px 70px -30px rgba(245,196,0,.45)}
+}
+@media(prefers-reduced-motion:reduce){
+  .p-card--feature{animation:none;box-shadow:0 30px 70px -30px rgba(245,196,0,.3)}
+}
+
+/* --- Reason number glow --- */
+.reason__num,.reasons--split .reason__num{
+  text-shadow:0 0 30px rgba(245,196,0,.25);
+}
+
+/* --- Smooth page transitions on mobile tab nav --- */
+.btabs__item{
+  position:relative;
+}
+.btabs__item.active::after{
+  content:"";position:absolute;top:0;left:25%;right:25%;height:2px;
+  background:var(--y);border-radius:0 0 2px 2px;
+}
+
+/* --- Campaign badge pulse --- */
+.campaign__tag{
+  animation:tagPulse 3s ease-in-out infinite;
+}
+@keyframes tagPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(245,196,0,.3)}
+  50%{box-shadow:0 0 0 6px rgba(245,196,0,0)}
+}
+@media(prefers-reduced-motion:reduce){.campaign__tag{animation:none}}
